@@ -1,0 +1,6 @@
+{
+    "DATABASE_NAME"     :   "honeyData",
+    "DB_USERNAME"       :   "honeyMonitor",
+    "DB_PASSWORD"       :   "Claudiu147!$&",
+    "DB_HOST"           :   "192.168.1.235"
+}
