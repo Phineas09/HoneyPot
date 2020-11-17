@@ -1,8 +1,6 @@
 import pyshark
 import mysql.connector
-import mysqlx
 from simpleMySql import SimpleMysql
-
 
 
 class CustomPacket:
@@ -10,27 +8,26 @@ class CustomPacket:
     packetStack = None
     packetCount = 0
 
-
     def __init__(self):
         self.packetCount = 0
         self.packetStack = []
 
-
     def processPackets(self, packet):
         self.packetCount = self.packetCount + 1
+        
         if(packet.layers[-1].layer_name == "http"):
-            #print(packet.pretty_print())
-            self.packetStack.append(packet)
-            #
-            #print(packet.layers[1].field_names)
             print(f"Http packet from {packet.layers[1].get_field('host')}\t to  {packet.layers[1].get_field('dst')}")
+            self.packetStack.append(packet)
+            #print(packet.layers[1].field_names)
             #print(packet.layers[-1].field_names)
             #I want only the attacker packets
-            if(packet.layers[1].get_field('dst') == "192.168.1.97"):
+            if(packet.layers[1].get_field('dst') == "192.168.1.191"): #ip address of the site
                 print(packet.layers[-1].get_field('request_uri'))
                 print(packet.layers[-1].get_field('request_full_uri'))
                 print(packet.layers[-1].get_field('request_method'))
                 print("Delim---------------------------------------")
+
+            
 
 
 
