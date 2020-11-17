@@ -1,0 +1,8 @@
+{
+    "DB_NAME"           :   "honeyData",
+    "DB_USERNAME"       :   "honeyMonitor",
+    "DB_PASSWORD"       :   "Claudiu147!$&",
+    "DB_HOST"           :   "192.168.1.235",
+    "IGNORE_IP"         :   ["192.168.1.191"],
+    "_comment_IGNORE_IP":   "Ip list of the destinations we want to monitor"
+}
