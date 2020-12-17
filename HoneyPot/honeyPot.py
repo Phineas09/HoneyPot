@@ -105,4 +105,3 @@ if __name__ == '__main__':
         print('\nInterrupted\n')
         customPacket.printStats()
         sys.exit(0)
-
