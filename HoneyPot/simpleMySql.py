@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # vim: fileencoding=utf-8: noexpandtab
 
+
 """
     A very simple wrapper for mysql (mysql-connector)
     Methods:
